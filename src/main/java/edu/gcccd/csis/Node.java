@@ -1,6 +1,6 @@
 package edu.gcccd.csis;
 
-public class Node<E> {
+class Node<E> {
     private Node next;
     private E content;
 
@@ -22,10 +22,6 @@ public class Node<E> {
     }
 
     void setNext(final Node<E> pointed) {
-        //Throw exception if the nodes hold different types of data
-        if (!pointed.getContent().getClass().equals(content.getClass())) {
-            throw new IllegalArgumentException();
-        }
         this.next = pointed;
     }
 }
